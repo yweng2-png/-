@@ -1,0 +1,490 @@
+id: d73bcc60-ca55-4196-9500-13739396dee2
+name: Development
+type: 1
+canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+blocks:
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Determines optimal clustering count using K-Means on scaled features,
+    comparing elbow method inertia and silhouette scores for k=2 to k=7 clusters.
+  height: 1000
+  id: 07aa78ff-d673-412f-985f-67d08a88c01d
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: kmeans_cluster_optimization
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 3500
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Visualizes a Pareto analysis of discount exposure by sub-category,
+    highlighting which categories drive profit loss through discounting. Bars are
+    color-coded by margin risk (<8% in red), and an overlay curve shows cumulative
+    discount impact with an 80% threshold line.
+  height: 1000
+  id: 0e0d360c-0202-4d87-8d5b-82141e8ac107
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: loss_rate_subcategory_chart
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 500
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Analyzes data quality for three customer fields (Purchase_Amount, Review_Rating,
+    Previous_Purchases) by computing missing values, descriptive statistics (mean,
+    median, std, skewness), quartiles, and IQR, then visualizes distributions with
+    mean/median reference lines.
+  height: 1000
+  id: 16c72c5d-f1fc-456c-8693-7c5235a7c8ef
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: data_quality_diagnosis
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 1400
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Compiles key performance metrics including total orders, profit, loss
+    rates, discount recovery potential, predictive model performance (94.1% loss detection),
+    and high-value customer segment analysis into a summary dashboard view.
+  height: 1000
+  id: 2b23088d-b87d-4600-aa5c-7958328f0256
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: kpi_summary_dashboard
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 5500
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Segments customers into 4 clusters using K-means and generates a profile
+    showing average feature values, cluster size, and percentage of total customer
+    base for each segment.
+  height: 1000
+  id: 35872056-c8f5-4db2-acd7-f80ffed74ae6
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: kmeans_customer_segmentation
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 4500
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Creates a frequency scoring system for purchase patterns, maps it to
+    customer data, and analyzes feature distributions to assess whether scaling is
+    needed for clustering analysis.
+  height: 1000
+  id: 44c6a92c-89c2-4dbb-a261-81d8cedeb089
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: customer_frequency_clustering_prep
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 3000
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: "Presents four customer segments from KMeans clustering with revenue\
+    \ impact and engagement profiles: high-value churners (6%), loyal repeat buyers\
+    \ (16%), and two low-frequency segments (78%) divided by age\u2014identifying\
+    \ retention and activation priorities."
+  height: 1000
+  id: 4a9ac7de-21dc-40c9-999d-7687e33a2e8c
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: markdown_block_3
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 4000
+  y: 5000
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Diagnoses profit loss patterns by subcategory (loss rate, margin, discounts)
+    and estimates recoverable profit from high-discount, low-margin products.
+  height: 1000
+  id: 7cee7fd2-d6a0-493f-8e4a-a9764cf788c6
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: analyze_profit_discount_loss
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 0
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: 'Explains the metric choice for ranking loss-driving sub-categories:
+    using actual dollar losses instead of discount amounts surfaces the true low-margin
+    products (Paper, Binders, Furnishings, Art) responsible for 75% of losses, following
+    the 80/20 principle.'
+  height: 1000
+  id: 8a7d463c-cb5a-47fb-9d67-29520a635de1
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: markdown_block_1
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 4000
+  y: 500
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Generates model evaluation visualizations including a confusion matrix
+    and top 12 feature importance chart from a Random Forest classifier trained to
+    predict order loss risk.
+  height: 1000
+  id: 8c4a5512-932a-4d09-92e2-092da898b2b5
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: model_evaluation_plots
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 1500
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: 'Documents data-driven imputation strategy for missing values using
+    EDA diagnostics: median imputation for skewed Purchase_Amount & Review_Rating,
+    mean imputation for symmetric Previous_Purchases.'
+  height: 1000
+  id: 8c750235-8395-4a39-a551-cb25ad250c29
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: markdown_block
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 4000
+  y: 2300
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Documents the rationale for selecting k=4 clusters over k=2 despite
+    lower silhouette score, prioritizing business interpretability and actionable
+    customer segments for retention strategies over statistical optimization.
+  height: 1000
+  id: b60e20fa-ff8d-4d21-bdb7-1be469030f85
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: python_block
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 4000
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Visualizes boxplots to detect outliers across multiple numeric columns
+    using the IQR method, displaying counts and percentages of outliers per field.
+  height: 1000
+  id: ba40221c-de24-44c5-afd3-fb1979315099
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: boxplot_outlier_detection
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 2300
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Builds and evaluates a Random Forest classifier to predict loss-making
+    orders. Preprocesses categorical features via one-hot encoding and numerical features
+    via scaling, then trains on 75% of data and reports classification metrics (ROC-AUC,
+    precision, recall) on the test set.
+  height: 1000
+  id: d0e61d01-175d-4898-aa2f-2972bec163b1
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: loss_prediction_classifier
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 1000
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: 'Explains why the profit prediction model achieves near-perfect AUC:
+    profit is deterministically derived from margin rate and discount percentage.
+    While a simple rule could achieve the same accuracy, the ML model provides operational
+    value through generalization, probability scoring, and automated discovery of
+    business rules.'
+  height: 1000
+  id: d2ae1f3c-5ece-432b-bb0c-ff13e2ed3669
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: markdown_block_2
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 4000
+  y: 2500
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Cleans and transforms raw customer and order data using SQLite. Removes
+    duplicates, imputes missing values (purchase amounts, ratings, and purchases with
+    statistical measures), standardizes categorical fields, and calculates derived
+    metrics including net price, revenue, profit, margin rate, and discount amounts.
+  height: 1000
+  id: d57b6f94-a61e-4a75-836c-b3b6ad0db633
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: sqlite_data_cleaning
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 2800
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Performs a Pareto analysis of sub-category profitability by visualizing
+    dollar losses on a bar chart and cumulative loss percentage as a line, highlighting
+    high-risk categories with thin margins.
+  height: 1000
+  id: d70ad1c9-7796-4e2b-b0a6-59de16a3afd5
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: pareto_loss_analysis
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 500
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Visualizes customer clusters in 2D space using PCA dimensionality reduction,
+    showing how the four KMeans segments separate across the two principal components
+    with variance explained percentages.
+  height: 1000
+  id: d875bb5b-d463-433a-9115-4cada5383bb9
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: pca_cluster_visualization
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 4500
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Tests if a loss-prediction model performs equally well using business-interpretable
+    Margin_Rate instead of raw price fields. Compares AUC scores to validate that
+    pricing signals are captured through margin metrics rather than raw prices.
+  height: 1000
+  id: e2e2153f-1817-49e0-b10e-a173cdf7bf1e
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: robustness_check_margin_vs_price
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 2000
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: Load and clean customer and order CSV files, standardize column names
+    by removing spaces and special characters, and create two DataFrames (5k customers,
+    10k orders).
+  height: 1000
+  id: e7322037-6f2e-4199-a7bd-1da286b692ba
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: load_clean_dataframes
+  parent_id: null
+  properties: {}
+  status: 3
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 0
+- auto_size: false
+  canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  compute_settings: null
+  description: 'Strategic roadmap presenting three data-backed business initiatives:
+    (1) implement discount policy floors for low-margin categories to recover $83K
+    profit; (2) deploy real-time ML-based loss-risk flagging in order approval; (3)
+    prioritize high-value, at-risk customer segment for proactive retention.'
+  height: 1000
+  id: f2b475e0-9a33-4faa-add2-14de30129941
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  name: markdown_block_4
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 4
+  variables: null
+  width: 1600
+  x: 4000
+  y: 6000
+edges:
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: 106ea60a-f788-46fb-a549-42c03f790ed7
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: 4a9ac7de-21dc-40c9-999d-7687e33a2e8c
+  target: 2b23088d-b87d-4600-aa5c-7958328f0256
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: 1e42676c-228e-4179-b244-c1e1801b21d7
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: 7cee7fd2-d6a0-493f-8e4a-a9764cf788c6
+  target: 0e0d360c-0202-4d87-8d5b-82141e8ac107
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: 2185e8e9-2417-4ebd-923e-e8a6aa9f2d66
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: 8c4a5512-932a-4d09-92e2-092da898b2b5
+  target: e2e2153f-1817-49e0-b10e-a173cdf7bf1e
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: 411dcc2a-dd7e-4147-a4bc-25d6b31bca2d
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: d70ad1c9-7796-4e2b-b0a6-59de16a3afd5
+  target: 8a7d463c-cb5a-47fb-9d67-29520a635de1
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: 64d97855-ea3e-4bf0-bd96-4898e75139e5
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: 0e0d360c-0202-4d87-8d5b-82141e8ac107
+  target: d70ad1c9-7796-4e2b-b0a6-59de16a3afd5
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: 7e77ec26-b102-48f3-b07b-8d17e0c1ba0a
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: ba40221c-de24-44c5-afd3-fb1979315099
+  target: 8c750235-8395-4a39-a551-cb25ad250c29
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: 8b347e02-38ad-4077-93f4-4d34ee509970
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: d2ae1f3c-5ece-432b-bb0c-ff13e2ed3669
+  target: 44c6a92c-89c2-4dbb-a261-81d8cedeb089
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: 8cea9365-b8a4-4f5e-b71a-2488fb8c7f3c
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: d57b6f94-a61e-4a75-836c-b3b6ad0db633
+  target: 7cee7fd2-d6a0-493f-8e4a-a9764cf788c6
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: 9910944b-861c-460c-8314-d2caef0edfd5
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: 07aa78ff-d673-412f-985f-67d08a88c01d
+  target: b60e20fa-ff8d-4d21-bdb7-1be469030f85
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: 9e2deebe-b4fa-4769-809f-1de997ded15e
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: e7322037-6f2e-4199-a7bd-1da286b692ba
+  target: 16c72c5d-f1fc-456c-8693-7c5235a7c8ef
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: 9fc84fd7-a4a9-4913-a874-795317150445
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: e2e2153f-1817-49e0-b10e-a173cdf7bf1e
+  target: d2ae1f3c-5ece-432b-bb0c-ff13e2ed3669
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: a3db169f-5870-4ff9-95ea-966813788193
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: b60e20fa-ff8d-4d21-bdb7-1be469030f85
+  target: 35872056-c8f5-4db2-acd7-f80ffed74ae6
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: a7efc4d1-d6b6-40be-94a1-616c96e49b1a
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: 44c6a92c-89c2-4dbb-a261-81d8cedeb089
+  target: 07aa78ff-d673-412f-985f-67d08a88c01d
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: b1da8cde-4c4a-4ca3-b043-6d6e761234e3
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: 2b23088d-b87d-4600-aa5c-7958328f0256
+  target: f2b475e0-9a33-4faa-add2-14de30129941
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: c11a26b5-0c5d-44e4-a880-5abe0be58051
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: 35872056-c8f5-4db2-acd7-f80ffed74ae6
+  target: d875bb5b-d463-433a-9115-4cada5383bb9
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: c641d0b6-1cfc-4642-8759-3de2c3f2cea1
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: 8c750235-8395-4a39-a551-cb25ad250c29
+  target: d57b6f94-a61e-4a75-836c-b3b6ad0db633
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: d4e4defa-9752-475f-8802-f59d4b701961
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: d875bb5b-d463-433a-9115-4cada5383bb9
+  target: 4a9ac7de-21dc-40c9-999d-7687e33a2e8c
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: d7e49e59-5dd8-4bb1-9479-7e52f1d7ae20
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: d0e61d01-175d-4898-aa2f-2972bec163b1
+  target: 8c4a5512-932a-4d09-92e2-092da898b2b5
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: ddb49ad8-858e-4793-b23d-cf0dbdf32fc2
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: 8a7d463c-cb5a-47fb-9d67-29520a635de1
+  target: d0e61d01-175d-4898-aa2f-2972bec163b1
+- canvas_id: 4024046e-67d2-4853-888d-1fff685278f3
+  id: f4716f19-3eec-41b9-b1b7-e766196a48ab
+  layer_id: d73bcc60-ca55-4196-9500-13739396dee2
+  source: 16c72c5d-f1fc-456c-8693-7c5235a7c8ef
+  target: ba40221c-de24-44c5-afd3-fb1979315099
